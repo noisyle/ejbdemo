@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<servlet-name>helloServlet</servlet-name>
+		<servlet-class>com.noisyle.demo.ejbdemo.web.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>helloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<ejb-ref id="EjbRef_1293088971729">
+		<description></description>
+		<ejb-ref-name>HelloHome</ejb-ref-name>
+		<ejb-ref-type>Session</ejb-ref-type>
+		<home>com.noisyle.demo.ejbdemo.ejb.HelloHome</home>
+		<remote>com.noisyle.demo.ejbdemo.ejb.Hello</remote>
+		<ejb-link>Hello</ejb-link>
+	</ejb-ref>
+</web-app>
